@@ -26,8 +26,8 @@ def joy_callback(msg : Joy):
 
 
 if __name__ == '__main__':
-    rospy.init_node('turtle_node')
-    rospy.loginfo("turtle node start")
+    rospy.init_node('4Wheel_node')
+    rospy.loginfo("4Wheel node start")
 
     pub = rospy.Publisher("/4_wheel/cmd_vel", Twist, queue_size=10)
     Joy_sub = rospy.Subscriber("/joy", Joy, callback=joy_callback)
