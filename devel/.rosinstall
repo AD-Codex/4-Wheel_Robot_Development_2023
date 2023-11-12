@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/dell/robot_ws/devel/setup.sh
