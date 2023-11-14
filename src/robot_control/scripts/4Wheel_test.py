@@ -39,7 +39,7 @@ if __name__ == '__main__':
         msg_write.linear.x = wheel_linear_x*100
         msg_write.angular.z = Wheel_angular_z*100
 
-        msg_write.linear.z = wheel_linear_z*100
+        msg_write.linear.z = wheel_linear_z
 
         pub.publish(msg_write)
         rate.sleep()
