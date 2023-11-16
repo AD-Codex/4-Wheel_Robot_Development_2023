@@ -5,8 +5,9 @@
    1. http://wiki.ros.org
    2. https://youtu.be/wfDJAYTMTdk?si=RquSOszKwgxqnPUl
    3. https://youtu.be/WLVfZXxpHYI?si=mZRV77YuE6LkwY_4
-   4. https://www.clearpathrobotics.com/assets/guides/noetic/husky/SimulatingHusky.html
-   5. https://github.com/Tinker-Twins/Husky
+   4. http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
+   5. https://www.clearpathrobotics.com/assets/guides/noetic/husky/SimulatingHusky.html
+   6. https://github.com/Tinker-Twins/Husky
 
 2. ZED
    1. https://www.stereolabs.com/developers/
