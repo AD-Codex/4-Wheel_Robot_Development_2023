@@ -43,7 +43,7 @@ if __name__ == '__main__':
         msg_write.linear.z = wheel_linear_z
 
         pub.publish(msg_write)
-        # husky_pub.publish(msg_write)
+        husky_pub.publish(msg_write)
         rate.sleep()
 
     rospy.spin()
