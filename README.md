@@ -12,6 +12,8 @@
 2. ZED
    1. https://www.stereolabs.com/developers/
    2. https://www.stereolabs.com/docs/ros/
+   3. https://www.stereolabs.com/docs/api/python/
+   4. https://github.com/stereolabs
 
 3. Jetson
    1. https://docs.nvidia.com/jetson/jetpack/install-jetpack/index.html
