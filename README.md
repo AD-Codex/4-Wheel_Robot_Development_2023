@@ -25,3 +25,8 @@
    1. https://webviz.io
    2. https://avs.auto/#/
    3. https://github.com/aurora-opensource/xviz
+
+Jetson pytorch setup
+1. https://www.youtube.com/watch?v=xqroBkpf3lY
+2. https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html
+3. https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
