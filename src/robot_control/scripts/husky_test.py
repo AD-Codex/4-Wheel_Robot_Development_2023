@@ -46,7 +46,7 @@ if __name__ == '__main__':
     rospy.loginfo("husky node start")
 
     husky_pub = rospy.Publisher("/cmd_vel", Twist, queue_size=10)
-    sub = rospy.Subscriber("/imu/data", Imu, callback=imu_callback)
+    sub = rospy.Subscriber("imu/data", Imu, callback=imu_callback)
     Joy_sub = rospy.Subscriber("/joy", Joy, callback=joy_callback)
 
     rospy.spin()
