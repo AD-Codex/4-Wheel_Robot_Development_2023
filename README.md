@@ -30,3 +30,17 @@ Jetson pytorch setup
 1. https://www.youtube.com/watch?v=xqroBkpf3lY
 2. https://docs.nvidia.com/deeplearning/frameworks/install-pytorch-jetson-platform/index.html
 3. https://forums.developer.nvidia.com/t/pytorch-for-jetson/72048
+
+jetson YOLOv8 setup
+1. https://wiki.seeedstudio.com/YOLOv8-TRT-Jetson/
+2. https://docs.ultralytics.com/modes/train/
+
+ZED cam python API
+1. https://github.com/stereolabs/zed-sdk/tree/master/tutorials
+2. https://www.stereolabs.com/docs/api/python/index.html
+
+ZED openCV
+1. https://www.stereolabs.com/docs/opencv
+2. https://github.com/stereolabs/zed-opencv/tree/master/python
+
+
