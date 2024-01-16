@@ -44,4 +44,7 @@ ZED openCV
 1. https://www.stereolabs.com/docs/opencv
 2. https://github.com/stereolabs/zed-opencv/tree/master/python
 
+NODE
+1. https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
+
 
