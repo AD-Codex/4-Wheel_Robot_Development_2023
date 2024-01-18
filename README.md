@@ -26,6 +26,8 @@
    2. https://avs.auto/#/
    3. https://github.com/aurora-opensource/xviz
    4. https://webviz.io/worldview/#/docs/guides/quick-start
+   5. https://foxglove.dev/download
+   6. https://docs.foxglove.dev/docs/introduction
 
 Jetson pytorch setup
 1. https://www.youtube.com/watch?v=xqroBkpf3lY
