@@ -1,0 +1,5 @@
+
+# roscore
+
+# rosrun joy joy_node
+# roslaunch robot_control husky_joy.launch

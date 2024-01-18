@@ -1,0 +1,12 @@
+1. floxglove desktop app start
+2. roscore start
+
+option 1 direct ROS
+# floxglove --> file --> open_connection --> ROS1
+
+option 2 ros bridge
+# roslaunch rosbridge_server rosbridge_websocket.launch
+# floxglove --> file --> open_connection --> Rosbridge
+
+
+

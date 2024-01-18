@@ -1,0 +1,31 @@
+wifi_usr = user
+wifi_ps = Pf99hfHb
+
+systemctl --user start vino-server
+systemctl --user status vino-server
+
+mkdir -p ~/.config/autostart
+cp /usr/share/applications/vino-server.desktop ~/.config/autostart
+
+
+gsettings set org.gnome.Vino prompt-enabled false
+gsettings set org.gnome.Vino require-encryption false
+
+
+gsettings set org.gnome.Vino authentication-methods "['vnc']"
+gsettings set org.gnome.Vino vnc-password $(echo -n 'nvidia'|base64)
+
+sudo reboot now
+
+sudo netstat -tulpn | grep LISTEN
+
+# remote Mode
+
+step 1
+roscore
+PC - export ROS_MASTER_URI=http://ip_pc:11311
+
+step 2
+roscore
+Jetson - export ROS_MASTER_URI=http://ip_pc:11311
+
