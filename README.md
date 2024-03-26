@@ -8,6 +8,7 @@
    4. http://wiki.ros.org/joy/Tutorials/ConfiguringALinuxJoystick
    5. https://www.clearpathrobotics.com/assets/guides/noetic/husky/SimulatingHusky.html
    6. https://github.com/Tinker-Twins/Husky
+   7. https://industrial-training-master.readthedocs.io/en/melodic/_source/session5/OpenCV-in-Python.html
 
 2. ZED
    1. https://www.stereolabs.com/developers/
