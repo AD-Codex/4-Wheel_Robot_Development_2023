@@ -53,5 +53,5 @@ NODE
 model Predictive Controller
 1. https://www.google.lk/books/edition/Model_Predictive_Control_System_Design_a/vcc_AAAAQBAJ?hl=en&gbpv=1&pg=PR25&printsec=frontcover
 2. https://www.diva-portal.org/smash/get/diva2:1268012/FULLTEXT01.pdf
-3. 
+3. https://aleksandarhaber.com/model-predictive-control-mpc-tutorial-1-unconstrained-formulation-derivation-and-implementation-in-python-from-scratch/
 
