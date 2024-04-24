@@ -50,4 +50,8 @@ ZED openCV
 NODE
 1. https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04
 
+model Predictive Controller
+1. https://www.google.lk/books/edition/Model_Predictive_Control_System_Design_a/vcc_AAAAQBAJ?hl=en&gbpv=1&pg=PR25&printsec=frontcover
+2. https://www.diva-portal.org/smash/get/diva2:1268012/FULLTEXT01.pdf
+3. 
 
