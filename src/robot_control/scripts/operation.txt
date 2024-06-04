@@ -1,0 +1,10 @@
+
+. ~/.bashrc
+ROS_LAN - according to wifi
+
+1. camera node -- zed_node.py
+2. line detect -- Lane_detect_node_v1.py
+3. line follow -- Line_follow_node.py
+4. depth measure -- object_detect.py
+5. robot car in VW -- foxglove_car_node.py
+6. objects in VW -- foxglove_object_node.py
