@@ -14,6 +14,7 @@ from cv_bridge import CvBridge
 import cv2
 from ultralytics import YOLO
 import numpy as np
+from itertools import chain
 
 
 shape = (376, 672, 3)
@@ -21,6 +22,8 @@ frame_cap = np.zeros(shape)
 frame_success = False
 
 model1=YOLO('best.pt')
+# model1.export(format="engine")
+# model1 = YOLO('best.engine')
 
 width = 640
 height = 320
@@ -190,6 +193,7 @@ if __name__ == '__main__' :
     sub_image = rospy.Subscriber("/zed_node/image", Image, callback=image_read)
     pub_displacement = rospy.Publisher("/lane_detect/line_displace", Int32MultiArray, queue_size=5)
     pub_lineCoord = rospy.Publisher("/lane_detect/line_point", Int32MultiArray, queue_size=5)
+    pub_laneCoord = rospy.Publisher("/lane_detect/lane_point", Int32MultiArray, queue_size=10)
     pub_laneImage = rospy.Publisher('/lane_detect/lane_image', Image, queue_size=10)
     pub_laneMask = rospy.Publisher('/lane_detect/lane_mask', Image, queue_size=10)
     pub_transformMask = rospy.Publisher('/lane_detect/transform_mask', Image, queue_size=10)
@@ -199,6 +203,8 @@ if __name__ == '__main__' :
     while not rospy.is_shutdown():
         line_displacement = Int32MultiArray()
         line_point = Int32MultiArray()
+        lane_point = Int32MultiArray()
+        line_point.data = [1,2,3,4]
         # msg.data = [0,0,0,0,1,1,1,2,2,3]
         # pub_displacement.publish(msg)
 
@@ -232,6 +238,7 @@ if __name__ == '__main__' :
                     height1, width1 = transform.shape
                     
                     sorted_data=get_road_edges(transform)
+                    # print("sorted_data :" , sorted_data)
 
                     # Convert single-channel frame to three-channel frame
                     color_transform_frame = cv2.cvtColor(transform, cv2.COLOR_GRAY2BGR)
@@ -254,6 +261,8 @@ if __name__ == '__main__' :
                         else:
                             # Append to the right side list if x > 100
                             right_side.append((x, y))
+
+                    print(len(left_side))
 
                     y_x_max_left = {}  # Dictionary to store the maximum x value for each y value
 
@@ -390,6 +399,7 @@ if __name__ == '__main__' :
                     displacement_list = list(filtered_dict.values())
                     print("list", displacement_list)
                     print("coordinates", cord_list)
+                    # print("lane coords", sorted_data)
 
                     # for a in cord_list:
                     #     x,y=a
@@ -398,6 +408,15 @@ if __name__ == '__main__' :
                     
                     n= len(displacement_list)
                     line_displacement.data = displacement_list
+                    line_point.data = list(chain.from_iterable(cord_list))
+
+                    # lane_points = [item for tup in sorted_data for item in tup]
+                    lane_points_list = []
+                    for i in range(0, len(sorted_data), 40):
+                        lane_points_list.append( sorted_data[i][0] )
+                        lane_points_list.append( sorted_data[i][1] )
+                    lane_point.data = lane_points_list
+                    print("lane points len", len(lane_points_list))
 
 
 
@@ -433,9 +452,9 @@ if __name__ == '__main__' :
                 # Break the loop if 'q' is pressed
                 if cv2.waitKey(1) & 0xFF == ord("q"):
                     break
-            except:
+            except Exception as e :
                 # cv2.imshow("YOLOv8 Inference2",frame)
-                print("except part is running")
+                print("except part is running", e)
                 cv2.imshow("YOLOv8 Inference2",frame)
 
 
@@ -444,6 +463,8 @@ if __name__ == '__main__' :
                 break
 
         pub_displacement.publish(line_displacement)
+        pub_lineCoord.publish(line_point)
+        pub_laneCoord.publish(lane_point)
 
         rate.sleep()
 
