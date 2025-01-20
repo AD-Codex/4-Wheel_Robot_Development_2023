@@ -55,3 +55,6 @@ model Predictive Controller
 2. https://www.diva-portal.org/smash/get/diva2:1268012/FULLTEXT01.pdf
 3. https://aleksandarhaber.com/model-predictive-control-mpc-tutorial-1-unconstrained-formulation-derivation-and-implementation-in-python-from-scratch/
 
+ROS2 FOXY
+1. https://www.theconstruct.ai/ubuntu-20-04-ros2-foxy-install-tutorial/
+2. https://github.com/introlab/rtabmap_ros/tree/foxy-devel
